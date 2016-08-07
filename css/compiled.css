@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background: url(/img/zwartevilt.png);
   margin: 0px;
   padding: 0px;
   position: relative; }
@@ -10,29 +10,50 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(/img/zwartevilt.png);
-    border-sizing: border-box;
-    z-index: -501; }
+    border-sizing: border-box; }
     body .intro .skully {
       width: 300px;
       height: auto;
       margin-bottom: 100px; }
+    body .intro .static-triangle {
+      position: relative;
+      width: 15px;
+      height: auto;
+      left: 15px; }
     body .intro .triangle {
       position: relative;
-      transition: opacity 300ms ease-in-out 5s; }
+      width: 15px;
+      height: auto;
+      animation-name: flyDown;
+      animation-delay: 4s;
+      animation-duration: 5s;
+      animation-iteration-count: infinite; }
+@keyframes flyDown {
+  0% {
+    top: 0px;
+    opacity: 1; }
+  50% {
+    top: 200px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 0; } }
   body header {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(/img/zwartevilt.png);
-    padding-bottom: 115px; }
+    background: #171717;
+    padding-bottom: 115px;
+    box-shadow: 0px 3px 15px 3px #000;
+    z-index: 100;
+    position: relative; }
     body header .logo {
       text-align: center;
       font-family: Road Rage;
-      font-size: 6.5em;
-      color: #C7AA4E;
+      font-size: 6.2em;
+      color: #E7E7E7;
       margin-bottom: 0px;
       padding: 0; }
     body header nav {
@@ -49,49 +70,69 @@ body {
         margin: 0; }
         body header nav li a {
           font-family: helveticaneue-ultralight;
-          color: #C7AA4E;
+          color: #E7E7E7;
           text-decoration: none;
-          font-size: 1.8em;
-          padding: 2.5px 50px;
+          font-size: 1.5em;
+          padding: 2.5px 45px;
           margin: 0px;
           transition: 0.3s; }
           body header nav li a:hover {
-            background: #C7AA4E;
-            color: black; }
+            background: #E7E7E7;
+            color: #171717; }
         body header nav li .middle {
           margin: 0;
-          border-top: 1px solid #C7AA4E;
-          border-bottom: 1px solid #C7AA4E; }
+          border-top: 1px solid #E7E7E7;
+          border-bottom: 1px solid #E7E7E7; }
         body header nav li .left {
-          border: 1px solid #C7AA4E;
+          border: 1px solid #E7E7E7;
           border-radius: 25px 0 0 25px; }
         body header nav li .right {
-          border: 1px solid #C7AA4E;
+          border: 1px solid #E7E7E7;
           border-radius: 0 25px 25px 0; }
         body header nav li .active {
-          background: #C7AA4E;
-          color: black; }
-  body .about {
-    width: 100%;
-    color: white;
-    font-family: helveticaneue;
-    height: 800px;
-    margin-top: 50px;
-    border-sizing: border-box;
+          background: #E7E7E7;
+          color: #171717; }
+  body div.content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px; }
-    body .about p {
-      max-width: 1000px;
-      column-width: 300px; }
+    flex-direction: column; }
+    body div.content section {
+      z-index: -500;
+      color: #171717;
+      font-family: NimbusSans;
+      border-sizing: border-box;
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      body div.content section h1 {
+        font-size: 4rem;
+        margin-botom: 50px;
+        color: #E7E7E7; }
+      body div.content section p {
+        border-sizing: border-box;
+        width: 65%;
+        font-family: helveticaneue;
+        column-count: 2;
+        column-rule: thin solid #171717;
+        text-align: justify; }
+    body div.content .about {
+      z-index: -5000;
+      order: -1;
+      color: #E7E7E7; }
+    body div.content .music {
+      background: none;
+      color: #E7E7E7;
+      height: 450px;
+      order: 1; }
   body footer {
     display: flex;
     padding: 0 50px;
     justify-content: space-between;
     align-items: center;
-    color: #C7AA4E;
-    font-family: helveticaneue; }
+    color: #171717;
+    font-family: helveticaneue-ultralight;
+    background: #EAEAC8; }
     body footer .footer1 {
       width: 50%; }
 

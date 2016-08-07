@@ -1,8 +1,13 @@
-$gold: #C7AA4E
+$gold: #E7E7E7
 $whiteBack: #E7E7E7
+$cream: #EAEAC8
+$mattegrey: #171717
+$darkShadow: 0px 3px 15px 3px #000
+$burgundy: #692E2F
+
 
 body
-  background-color: black
+  background: url(/img/zwartevilt.png)
   margin: 0px
   padding: 0px
   position: relative
@@ -14,19 +19,38 @@ body
     flex-direction: column
     justify-content: center
     align-items: center
-    background: url(/img/zwartevilt.png)
     border-sizing: border-box
-    z-index: -501
 
     .skully
       width: 300px
       height: auto
-      //z-index: -500
       margin-bottom: 100px
+
+    .static-triangle
+      position: relative
+      width: 15px
+      height: auto
+      left: 15px
 
     .triangle
       position: relative
-      transition: opacity 300ms ease-in-out 5s
+      width: 15px
+      height: auto
+      animation-name: flyDown
+      animation-delay: 4s
+      animation-duration: 5s
+      animation-iteration-count: infinite
+    @keyframes flyDown
+      0%
+        top: 0px
+        opacity: 1
+      50%
+        top: 200px
+        opacity: 0
+
+      100%
+        top: 0px
+        opacity: 0
 
   header
     text-align: center
@@ -34,12 +58,15 @@ body
     flex-direction: column
     justify-content: center
     align-items: center
-    background: url(/img/zwartevilt.png)
+    background: $mattegrey
     padding-bottom: 115px
+    box-shadow: 0px 3px 15px 3px #000
+    z-index: 100
+    position: relative
     .logo
       text-align: center
       font-family: Road Rage
-      font-size: 6.5em
+      font-size: 6.2em
       color: $gold
       margin-bottom: 0px
       padding: 0
@@ -60,14 +87,14 @@ body
           font-family: helveticaneue-ultralight
           color: $gold
           text-decoration: none
-          font-size: 1.8em
-          padding: 2.5px 50px
+          font-size: 1.5em
+          padding: 2.5px 45px
           margin: 0px
           transition: 0.3s
 
           &:hover
             background: $gold
-            color: black
+            color: $mattegrey
 
         .middle
           margin: 0
@@ -81,31 +108,58 @@ body
           border-radius: 0 25px 25px 0
         .active
           background: $gold
-          color: black
+          color: $mattegrey
 
-  .about
-    width: 100%
-    color: white
-    font-family: helveticaneue
-    height: 800px
-    margin-top: 50px
-    border-sizing: border-box
+
+  div.content
     display: flex
     flex-direction: column
-    align-items: center
-    padding-top: 50px
 
-    p
-      max-width: 1000px
-      column-width: 300px
 
+    section
+      z-index: -500
+      color: $mattegrey
+      font-family: NimbusSans
+      border-sizing: border-box
+      padding: 50px 0
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+
+      h1
+        font-size: 4rem
+        margin-botom: 50px
+        color: $whiteBack
+
+      p
+        border-sizing: border-box
+        width: 65%
+        font-family: helveticaneue
+        column-count: 2
+        column-rule: thin solid $mattegrey
+        text-align: justify
+
+    .about
+      //background: linear-gradient(to top, #8E2426 75%, #561B1C)
+      z-index: -5000
+      order: -1
+      color: $whiteBack
+
+    .music
+      background: none
+      color: $whiteBack
+      height: 450px
+      order: 1
 
   footer
     display: flex
     padding: 0 50px
     justify-content: space-between
     align-items: center
-    color: $gold
-    font-family: helveticaneue
+    color: $mattegrey
+    font-family: helveticaneue-ultralight
+    background: $cream
+
     .footer1
       width: 50%

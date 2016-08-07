@@ -7,7 +7,9 @@ $(document).ready(function(){
 
     $('.skully').css({
         'transform': 'translate(0px, '+ wSkullScroll /15 + '%)',
-        'filter': 'blur('+ wScroll / 20 + 'px)'
+        'filter': 'blur('+ wScroll / 29 + 'px)',
+        '-webkit-filter': 'blur('+ wScroll / 29 + 'px)'
+
     });
 
     $('.triangle').css({
