@@ -19,12 +19,12 @@ body {
       margin-bottom: 100px; }
     body .intro .static-triangle {
       position: relative;
-      width: 15px;
+      width: 30px;
       height: auto;
-      left: 15px; }
+      left: 34px; }
     body .intro .triangle {
       position: relative;
-      width: 15px;
+      width: 30px;
       height: auto;
       animation-name: flyDown;
       animation-delay: 4s;
@@ -112,12 +112,15 @@ body {
       body div.content section p {
         font-family: helveticaneue;
         width: 45%; }
+
     body div.content .about {
-      z-index: -5000;
+      /*z-index: -5000;*/
       order: -1;
       color: #FBFBFB;
-      height: 500px;
-      background: #FBFBFB url(/img/peterback.png) no-repeat center center fixed;
+      height: 600px;
+      background: #FBFBFB url("../img/Kim_Peter (31 of 45).jpg") no-repeat top center fixed;
+      /*background-image: url("../img/Kim_Peter (25 of 45).jpg");*/
+      background-size: auto 1500px;
       padding-bottom: 0;
       display: flex;
       flex-direction: row;
@@ -132,11 +135,16 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: rgba(0, 0, 0, 0.5);
-        height: 100%;
+        /*background: -webkit-linear-gradient(transparent, #171717);
+        /*background: rgba(0, 0, 0, 0.5);*/
+        height: 45%;
+        width: 600px;
+        border-radius: 8px;
         text-align: center;
+        text-shadow: 5px 5px 5px #000;
         justify-content: center; }
     body div.content .music {
+
       background: #FBFBFB;
       color: #171717;
       height: 450px;
@@ -149,7 +157,7 @@ body {
       color: #FBFBFB;
       height: 450px;
       padding: 0;
-      background: #FBFBFB url(/img/peterfront.jpg) no-repeat top center fixed; }
+      background: #FBFBFB url("../img/peterfront.jpg") no-repeat top center fixed; }
       body div.content .apparel .column2 {
         display: flex;
         flex-direction: column;
