@@ -1,0 +1,22 @@
+{
+  "name": "doughjummy.com",
+  "version": "1.0.0",
+  "description": "Doughjummy Culture. Music & Apparel.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam-sloan/Doughjummy.git"
+  },
+  "author": "Sam Sloan & Daniel Scala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sam-sloan/Doughjummy/issues"
+  },
+  "homepage": "https://github.com/sam-sloan/Doughjummy#readme",
+  "devDependencies": {
+    "sass": "^0.5.0"
+  }
+}
