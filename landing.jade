@@ -3,8 +3,10 @@ html(lang='eng')
   head
     meta(charset='UTF-8')
     title doughjummy
-    link(rel='stylesheet' type='text/css' href='css/precompile.css')
+    link(rel='stylesheet' type='text/css' href='css/main.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet")
     script(src='node_modules/easing/browser-easing.js')
     script(type='text/javascript' src='js/script.js')
     script(type='text/javascript' src='js/scrolling.js')
@@ -27,22 +29,34 @@ html(lang='eng')
         li
           a.right(href='#') APPAREL
     div.content
-      section.about 
-        div.column1
-          h1 DOUGHJUMMY
-          p DoughJummy is a young, talented, up and coming group from Hamilton, Ontario. With music that is inspired by their trials and tribulations, they are pushing the envelope. Despite their surroundings, they collectively define the phrase "Product Of My Environment" (P.O.M.E.).
-          p Doughjummy will be dropping their debut mixtape titled, POME. The project will be free, and available for digital download on September 30th. 
+      section.about
+        div.transparent
+          div.column1
+            h1 DOUGHJUMMY
+            p DoughJummy is a young, talented, up and coming group from Hamilton, Ontario. With music that is inspired by their trials and tribulations, they are pushing the envelope. Despite their surroundings, they collectively define the phrase "Product Of My Environment" (P.O.M.E.).
+            a(href='#') read more
           
       section.music
-        h1 MUSIC
-        p The DoughJummy movement and story is being narrated by Fouryy and KLM. They have succeeded in developing a musical sound that is influenced by their surroundings in North America, and the U.K., infused with a style in Afro Beats that stems from their African upbringing. 
+        div.column1
+          h1 MUSIC
+          p The DoughJummy movement and story is being narrated by Fouryy and KLM. They have succeeded in developing a musical sound that is influenced by their surroundings in North America, and the U.K., infused with a style in Afro Beats that stems from their African upbringing. 
+          a.button(href="#") SOUNDCLOUD
+          iframe(width="100%" max-width="800px" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/171815850&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false")
 
       section.apparel
-        div.column2
-          h1 APPAREL
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, facilis. Illo rerum, minus reiciendis quas corrupti, doloribus ex recusandae. Perspiciatis aut aspernatur error, blanditiis sunt. Facilis magnam ut ratione laboriosam excepturi, illum quasi. Quam optio ut corporis non sunt iure deleniti, veniam pariatur aspernatur illo perspiciatis dolor modi totam porro.
-        
+        div.transparent
+          div.column2
+            h1 APPAREL
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, facilis. Illo rerum, minus reiciendis quas corrupti, doloribus ex recusandae. Perspiciatis aut aspernatur error, blanditiis sunt. Facilis magnam ut ratione laboriosam excepturi, illum quasi. Quam optio ut corporis non sunt iure deleniti, veniam pariatur aspernatur illo perspiciatis dolor modi totam porro.
+            a(href="#") shop
+          
     footer
-      p.footer1 footer content
-      p.footer2 designed by sam & dan
+      p.footer1 designed by sam & dan
+      p.footer2 
+        a(href="https://www.instagram.com/dough_jummy/?hl=en" target="_blank")
+          i(class="fa fa-instagram fa-2x")
+        a(href="#")
+          i(class="fa fa-twitter fa-2x")
+        a(href="https://www.facebook.com/DoughJummy/" target="_blank")
+          i(class="fa fa-facebook fa-2x")
       p.footer3 version 1.0.0
