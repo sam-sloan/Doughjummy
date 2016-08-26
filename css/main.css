@@ -217,7 +217,6 @@ body {
               color: #171717; }
     body div.content .music {
       color: #171717;
-      height: 125vh;
       background-size: cover;
       background: #FBFBFB;
       display: -webkit-box;
@@ -228,14 +227,9 @@ body {
       display: -ms-flexbox;
       display: flex;
       flex-direction: row;
-      padding: 0;
+      padding: 100px;
       justify-content: center;
-      align-items: center;
-      padding: 15px; }
-      @media screen and (max-width: 880px) {
-        body div.content .music {
-          flex-flow: column;
-          height: auto; } }
+      align-items: center; }
       body div.content .music .column1 {
         display: -webkit-box;
         display: -moz-box;
@@ -245,32 +239,56 @@ body {
         display: -ms-flexbox;
         display: flex;
         flex-direction: column;
-        height: 100%;
         text-align: left;
         justify-content: center;
         max-width: 800px; }
-        @media screen and (max-width: 764px) {
-          body div.content .music .column1 {
-            width: 100%; } }
-        body div.content .music .column1 a.button {
+      body div.content .music iframe {
+        width: 100%; }
+      body div.content .music .passage {
+        text-align: center;
+        font-size: 0.9em;
+        font-weight: bolder;
+        margin-top: 50px; }
+      body div.content .music .social-media {
+        width: 300px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        margin-top: 25px; }
+        body div.content .music .social-media .soundcloud {
+          color: rgba(0, 0, 0, 0.5);
           text-decoration: none;
-          padding: 20px 50px;
-          color: #171717;
-          border: 2px solid #171717;
-          font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
           transition: 0.4s; }
-          body div.content .music .column1 a.button:hover {
-            background: #171717;
-            color: #FBFBFB; }
+          body div.content .music .social-media .soundcloud:hover {
+            color: #ff5500; }
+        body div.content .music .social-media .youtube {
+          color: rgba(0, 0, 0, 0.5);
+          text-decoration: none;
+          transition: 0.4s; }
+          body div.content .music .social-media .youtube:hover {
+            color: #cc181e; }
+        body div.content .music .social-media .spotify {
+          color: rgba(0, 0, 0, 0.5);
+          text-decoration: none;
+          transition: 0.4s; }
+          body div.content .music .social-media .spotify:hover {
+            color: #23cf5f; }
     body div.content .apparel {
       color: #FBFBFB;
-      height: 450px;
+      height: 100vh;
       padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: left;
-      background: #FBFBFB url(/img/peterfront.jpg) no-repeat top center fixed; }
+      background: #FBFBFB url(/img/peterandkim.jpg) no-repeat center right fixed; }
       body div.content .apparel .transparent {
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
         width: 100%;
@@ -314,7 +332,7 @@ body {
     z-index: 20;
     display: flex;
     padding: 0px 50px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     color: rgba(0, 0, 0, 0.5);
     font-family: helveticaneue-ultralight;
