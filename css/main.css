@@ -136,7 +136,8 @@ body {
       body header nav li {
         margin: 0; }
         body header nav li a {
-          font-family: helveticaneue-ultralight;
+          font-family: helveticaneue-ultralight, roboto;
+          font-weight: 100;
           color: #E7E7E7;
           text-decoration: none;
           font-size: 1.5em;
