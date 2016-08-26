@@ -204,6 +204,13 @@ body
           text-align: center
           padding: $padding
 
+          opacity: 0
+          transition: 1s
+          transform: translateX(-100px)
+          &.is-showing
+            opacity: 1
+            transform: translateX(0px)
+
           a
             text-decoration: none
             font-size: 1.5em
@@ -232,7 +239,7 @@ body
       background: $whiteBack
       @include display(flex)
       flex-direction: row
-      padding: 100px
+      padding: 100px 0px
       justify-content: center
       align-items: center
 
@@ -243,6 +250,8 @@ body
         text-align: left
         justify-content: center
         max-width: 800px
+        width: 100%
+        padding: $padding
 
       iframe
         width: 100%
@@ -309,6 +318,13 @@ body
           max-width: 800px
           text-align: center
           padding: $padding
+          opacity: 0
+          transition: 1s
+          transform: translateX(-100px)
+          &.is-showing
+            opacity: 1
+            transform: translateX(0px)
+
           a
             text-decoration: none
             font-size: 1.5em
@@ -337,39 +353,41 @@ body
   footer
     z-index: 20
     display: flex
-    padding: 0px 50px
+    height: 250px
+    display: flex
     justify-content: center
     align-items: center
-    color: $transparentBlack
-    font-family: helveticaneue-ultralight
     background: $whiteBack
-    height: 250px
 
-    @media screen and (max-width: 826px)
-      flex-flow: column
-      height: 300px
-
-    p
-      width: $third-of-eight
-      text-align: center
-      padding: 0
-      margin: 0
-      @media screen and (max-width: 826px)
-        width: 100%
-
-    .footer2
-      text-align: center
-      display: flex
+    .column
+      @include display(flex)
       justify-content: space-between
-      padding: 0
-      margin: 0
-      width: $third-of-eight
+      align-items: center
+      color: $transparentBlack
+      max-width: 800px
+      width: 100%
+      flex-flow: row
       @media screen and (max-width: 826px)
-        order: -1
+        flex-flow: column
+        height: auto
 
-      //social icons
-      a
-        color: $transparentBlack
-        transition: 0.4s
-        &:hover
-          color: $matteGrey
+      span
+        text-align: center
+        @media screen and (max-width: 826px)
+          width: 100%
+
+      .icons
+        text-align: center
+        display: flex
+        justify-content: space-between
+        padding: 0
+        width: $third-of-eight
+        @media screen and (max-width: 826px)
+          order: -1
+          max-width: 100%
+        //social icons
+        a
+          color: $transparentBlack
+          transition: 0.4s
+          &:hover
+            color: $matteGrey
