@@ -1,6 +1,6 @@
 html {
   font-size: 16px;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: roboto;
   color: #171717;
   overflow-x: hidden; }
 
@@ -109,7 +109,7 @@ body {
     position: relative; }
     body header .logo {
       text-align: center;
-      font-family: Road Rage;
+      font-family: "roadrage";
       font-size: 6.2em;
       color: #E7E7E7;
       margin-bottom: 0px;
