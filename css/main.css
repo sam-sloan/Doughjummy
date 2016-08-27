@@ -137,7 +137,7 @@ body {
         margin: 0; }
         body header nav li a {
           font-family: helveticaneue-ultralight, roboto;
-          font-weight: 100;
+          font-weight: 200;
           color: #E7E7E7;
           text-decoration: none;
           font-size: 1.5em;
@@ -364,20 +364,27 @@ body {
       color: rgba(0, 0, 0, 0.5);
       max-width: 800px;
       width: 100%;
-      flex-flow: row; }
+      flex-flow: row;
+      font-size: 0.9em; }
       @media screen and (max-width: 826px) {
         body footer .column {
           flex-flow: column;
           height: auto; } }
       body footer .column span {
-        text-align: center; }
-        @media screen and (max-width: 826px) {
-          body footer .column span {
-            width: 100%; } }
-      body footer .column .icons {
         text-align: center;
+        max-width: 266.666px;
+        width: 100%;
+        text-align: left; }
+      body footer .column .footer1 a {
+        color: rgba(0, 0, 0, 0.5);
+        transition: 0.3s; }
+        body footer .column .footer1 a:hover {
+          color: #171717; }
+      body footer .column .footer3 {
+        text-align: right; }
+      body footer .column .icons {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 0;
         width: 266.666px; }
         @media screen and (max-width: 826px) {

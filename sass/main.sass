@@ -139,7 +139,7 @@ body
         margin: 0
         a
           font-family: helveticaneue-ultralight, roboto
-          font-weight: 100
+          font-weight: 200
           color: $gold
           text-decoration: none
           font-size: 1.5em
@@ -368,19 +368,30 @@ body
       max-width: 800px
       width: 100%
       flex-flow: row
+      font-size: 0.9em
       @media screen and (max-width: 826px)
         flex-flow: column
         height: auto
 
       span
         text-align: center
-        @media screen and (max-width: 826px)
-          width: 100%
+        max-width: $third-of-eight
+        width: 100%
+        text-align: left
+
+      .footer1
+        a
+          color: $transparentBlack
+          transition: 0.3s
+          &:hover
+            color: $matteGrey
+
+      .footer3
+        text-align: right
 
       .icons
-        text-align: center
         display: flex
-        justify-content: space-between
+        justify-content: space-around
         padding: 0
         width: $third-of-eight
         @media screen and (max-width: 826px)

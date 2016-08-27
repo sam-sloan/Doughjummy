@@ -21,7 +21,6 @@ $(document).ready(function(){
         'transform': 'translate(0px, '+ wScroll /5 + '%)',
         'filter': 'blur('+ wScroll / 29 + 'px)',
         '-webkit-filter': 'blur('+ wScroll / 29 + 'px)'
-
     });
     // to blur the skull
     $('.triangle').css({
