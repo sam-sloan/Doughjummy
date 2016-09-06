@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     $("html body").animate({
       scrollTop : $("#" + sectionID).offset().top
-    }, 700)
+    }, 700);
   });
 
 
@@ -21,10 +21,6 @@ $(document).ready(function(){
         'transform': 'translate(0px, '+ wScroll /5 + '%)',
         'filter': 'blur('+ wScroll / 29 + 'px)',
         '-webkit-filter': 'blur('+ wScroll / 29 + 'px)'
-    });
-    // to blur the skull
-    $('.triangle').css({
-      'transform': 'translate(0px, '+ wScroll /3 + '%)'
     });
 
     if (wScroll > $('.about').offset().top - ($(window).height() / 2)) {

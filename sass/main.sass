@@ -3,12 +3,12 @@
 @import "mixins.sass"
 
 // Typography
-$font-size: 16px
 $font-color: #FBFBFB
 
 // Numbers
 $padding: 15px
 $third-of-eight: 266.666px
+$papa-bear: 826px
 
 
 // Color Palette
@@ -30,21 +30,44 @@ $transparentBlack: rgba(0, 0, 0, 0.5)
 
 // Defaults
 html
-  font-size: $font-size
   font-family: roboto
   color: $matteGrey
+  font-size: 16px
   overflow-x: hidden
 
 p
   line-height: 1.8
-  font-size: 1.1em
   font-family: Roboto
-  font-weight: 300
+  font-weight: 100
   text-align: left
+  font-size: 1.1em
 
 h1
   letter-spacing: -3px
+  font-size: 3em
 
+.sticky-nav
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background: rgba(0,0,0,0.8)
+  z-index: 10000000000
+  border-radius: 0
+  transition: 1s
+  box-shadow: 0px -5px 15px 5px black
+
+  -webkit-transform: translateZ(0)
+  .middle, .left, .right
+    border: thin solid rgba(0,0,0,0)
+    //padding: 0px 100px
+    border-right: thin solid $whiteBack
+    &:hover
+      background: none
+      color: white
+      text-shadow: 0px 0px 1px white
+  .right
+    border: none
 body
   background: url(/img/zwartevilt.png)
   margin: 0px
@@ -66,23 +89,26 @@ body
 
     //style for the skull
     .skully
-      width: 300px
+      width: 20%
       height: auto
       margin-bottom: 100px
+      z-index: -500000000
 
     //this triangle holds position
     .static-triangle
-      position: relative
-      width: 15px
+      width: 1.5em
       height: auto
-      left: 15px
+      position: absolute
+      top: 85vh
+      margin: 0 auto
     //animated triangle
     .triangle
       position: relative
-      width: 15px
+      width: 1.5em
       height: auto
+      margin: 0 auto
+
       @include animation-name(flyDown)
-      @include animation-delay(4s)
       @include animation-duration(5s)
       @include animation-iteration-count(infinite)
     //animation keyframems for the triangle
@@ -113,10 +139,10 @@ body
     .logo
       text-align: center
       font-family: 'roadrage'
-      font-size: 6.2em
       color: $gold
       margin-bottom: 0px
       padding: 0
+      font-size: 5em
       @media screen and (max-width: 700px)
         font-size: 4em
       @media screen and (max-width: 464px)
@@ -132,20 +158,23 @@ body
       box-sizing: border-box
       padding: 8px 0px
       list-style: none
-      @media screen and (max-width: 524px)
+      @media screen and (max-width: 610px)
+        font-size: 0.8em
+      @media screen and (max-width: 560px)
         display: none
 
       li
         margin: 0
         a
-          font-family: helveticaneue-ultralight, roboto
-          font-weight: 200
+          font-family: lato
+          font-weight: 100
+          letter-spacing: 5px
           color: $gold
           text-decoration: none
-          font-size: 1.5em
           padding: 2.5px 45px
           margin: 0px
           transition: 0.3s
+          font-size: 1.5em
 
           &:hover
             background: $gold
@@ -176,11 +205,10 @@ body
       padding: 50px 0
 
       h1
-        font-size: 3rem
         font-family: $helvetica
         padding: 0
         margin: 0
-        text-align: left
+        text-align: lefta
 
     .about
       color: $whiteBack
@@ -196,13 +224,12 @@ body
         justify-content: center
 
         .column1
-          display: flex
+          @include display(flex)
           flex-direction: column
+          text-align: left
           justify-content: center
-          height: 100%
-          width: 100%
           max-width: 800px
-          text-align: center
+          width: 100%
           padding: $padding
 
           opacity: 0
@@ -214,11 +241,11 @@ body
 
           a
             text-decoration: none
-            font-size: 1.5em
             align-self: flex-start
             padding: 15px 15px
             margin: 0
             border-radius: 5px
+            font-size: 1.3em
             font-family: roboto
             font-weight: 600
             letter-spacing: 10px
@@ -243,6 +270,7 @@ body
       padding: 100px 0px
       justify-content: center
       align-items: center
+      height: 100vh
 
 
       .column1
@@ -260,7 +288,6 @@ body
       //text above the icons
       .passage
         text-align: center
-        font-size: 0.9em
         font-weight: bolder
         margin-top: 50px
 
@@ -328,7 +355,6 @@ body
 
           a
             text-decoration: none
-            font-size: 1.5em
             align-self: flex-start
             padding: 15px 50px
             margin: 0
@@ -337,6 +363,7 @@ body
             font-weight: 600
             letter-spacing: 10px
             z-index: 10000
+            font-size: 1.3em
             transition: 0.3s
             box-sizing: border-box
             background: rgba(255,255,255,0.3)
@@ -346,7 +373,7 @@ body
             &:hover
               background: rgba(255,255,255,0.8)
               border: thin solid rgba(255,255,255,0)
-              color: grey
+              color: $matteGrey
 
           h1
             align-self: flex-start
@@ -368,7 +395,6 @@ body
       max-width: 800px
       width: 100%
       flex-flow: row
-      font-size: 0.9em
       @media screen and (max-width: 826px)
         flex-flow: column
         height: auto
@@ -378,6 +404,9 @@ body
         max-width: $third-of-eight
         width: 100%
         text-align: left
+        @media screen and (max-width: 826px)
+          text-align: center
+          margin: 1em 0
 
       .footer1
         a
@@ -388,6 +417,8 @@ body
 
       .footer3
         text-align: right
+        @media screen and (max-width: 826px)
+          text-align: center
 
       .icons
         display: flex
@@ -397,9 +428,15 @@ body
         @media screen and (max-width: 826px)
           order: -1
           max-width: 100%
+          text-align: center
         //social icons
         a
           color: $transparentBlack
           transition: 0.4s
+          @media screen and (max-width: 826px)
+            width: 100%
+            text-align: center
+            margin: 10px 0px
+
           &:hover
             color: $matteGrey
